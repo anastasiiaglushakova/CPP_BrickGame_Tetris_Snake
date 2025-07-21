@@ -5,7 +5,8 @@
 #include <QTimer>
 #include "../../../brick_game/tetris/tetris_game.hpp"
 
-class TetrisController : public QObject {
+class TetrisController : public QObject
+{
     Q_OBJECT
 
 public:
@@ -30,4 +31,4 @@ private:
     QTimer *timer_;
 };
 
-#endif  // TETRIS_CONTROLLER_HPP
+#endif // TETRIS_CONTROLLER_HPP

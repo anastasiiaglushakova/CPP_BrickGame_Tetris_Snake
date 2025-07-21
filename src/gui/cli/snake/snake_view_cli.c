@@ -7,7 +7,7 @@
 
 #define BORDER_CHAR "##"
 #define SNAKE_CHAR "[]"
-#define APPLE_CHAR "@"
+#define APPLE_CHAR "@@"
 #define EMPTY_CHAR "  "
 
 static bool g_snake_running = true;
@@ -101,7 +101,8 @@ void SnakeCLI_DrawGame(void *game_ptr)
     {
         int text_len = 6; // "PAUSED"
         int center_x = 2 + (w * 2 - text_len) / 2;
-        mvprintw(center_y, center_x, "PAUSED");
+        mvprintw(center_y - 1, center_x, "PAUSED");
+        mvprintw(center_y + 1, center_x - 3, "Continue:  P");
     }
     else if (state == SNAKE_STATE_WIN)
     {
@@ -129,7 +130,8 @@ void SnakeCLI_HandleKey(int key, void *game_ptr)
     case '\n':
     case '\r':
     case KEY_ENTER:
-        if (snake_get_state(game_ptr) == SNAKE_STATE_LOSE || snake_get_state(game_ptr) == SNAKE_STATE_WIN) {
+        if (snake_get_state(game_ptr) == SNAKE_STATE_LOSE || snake_get_state(game_ptr) == SNAKE_STATE_WIN)
+        {
             snake_restart(game_ptr);
         }
         break;

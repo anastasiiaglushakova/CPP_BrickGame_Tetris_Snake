@@ -95,8 +95,8 @@ static void DrawPauseMessage(void)
 {
   int center_y = FIELD_HEIGHT / 2 + 1;
   int center_x = (FIELD_WIDTH + 1) * 2 / 2;
-  mvprintw(center_y, center_x - 3, "PAUSED");
-  mvprintw(center_y + 1, center_x - 8, "Press P to continue");
+  mvprintw(center_y - 1, center_x - 3, "PAUSED");
+  mvprintw(center_y + 1, center_x - 6, "Continue:  P");
 }
 
 void ShowMainMenu(void)

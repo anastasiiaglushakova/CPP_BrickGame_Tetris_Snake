@@ -173,9 +173,15 @@ dvi:
 	@echo "  dist            - create source tarball"
 	@echo "  checkformat     - check code formatting with clang-format"
 	@echo "  correctformat   - auto-format code with clang-format"
+	@echo "  deleteall   - remove build files, binaries and installed binaries"
 
 checkformat:
 	clang-format -n -style=Google $$(find . -type f \( -name '*.cpp' -o -name '*.h' \))
 
 correctformat:
 	clang-format -i -style=Google $$(find . -type f \( -name '*.cpp' -o -name '*.h' \))
+
+deleteall:
+	rm -rf $(BUILD_DIR)
+	rm -rf $(INSTALL_DIR)
+	rm -rf $(BIN_DIR)

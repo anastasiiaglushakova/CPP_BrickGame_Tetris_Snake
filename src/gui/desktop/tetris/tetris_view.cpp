@@ -63,7 +63,10 @@ void TetrisView::paintEvent(QPaintEvent *) {
   if (model_.IsPaused()) {
     painter.setPen(Qt::yellow);
     painter.setFont(QFont("Arial", 24, QFont::Bold));
-    painter.drawText(rect(), Qt::AlignCenter, "PAUSED");
+
+    QRect gameRect(0, 0, model_.GetWidth() * CELL_SIZE,
+                   model_.GetHeight() * CELL_SIZE);
+    painter.drawText(gameRect, Qt::AlignCenter, "PAUSED");
   }
 
   int borderX = model_.GetWidth() * CELL_SIZE;
