@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/brick_game/snake",
+                "${workspaceFolder}/brick_game/tetris",
+                "${workspaceFolder}/gui/desktop",
+                "${workspaceFolder}/gui/cli",
+                "/usr/include/qt5/QtCore",
+                "/usr/include/qt5/QtWidgets"
+            ],
+            "defines": [],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/brick_game/snake",
+                    "${workspaceFolder}/brick_game/tetris",
+                    "${workspaceFolder}/gui/desktop",
+                    "${workspaceFolder}/gui/cli"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

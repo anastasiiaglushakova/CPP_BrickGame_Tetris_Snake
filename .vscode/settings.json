@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "chrono": "cpp"
+    },
+    "editor.formatOnSave": true,
+    "C_Cpp.intelliSenseEngine": "Default"
+}
